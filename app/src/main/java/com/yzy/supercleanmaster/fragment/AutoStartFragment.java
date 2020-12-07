@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -96,7 +97,7 @@ public class AutoStartFragment extends BaseFragment {
 
     @OnClick(R.id.disable_button)
     public void onClickDisable() {
-      RootUtil.preparezlsu(mContext);
+//      RootUtil.preparezlsu(mContext);
        disableAPP();
 
     }
@@ -111,6 +112,8 @@ public class AutoStartFragment extends BaseFragment {
                     //部分receiver包含$符号，需要做进一步处理，用"$"替换掉$
                     cmd = cmd.replace("$", "\"" + "$" + "\"");
                     //执行命令
+
+                    Log.e("bjq","  cmd[" + j + "]:" + cmd);
                     mSring.add(cmd);
                 }
             }

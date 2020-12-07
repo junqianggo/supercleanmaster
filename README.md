@@ -32,5 +32,5 @@ superCleanMaster is deprecated  Thanks for all your support!
 * [CircleProgress](https://github.com/lzyzsd/CircleProgress)  
 * [TextCounter](https://github.com/premnirmal/TextCounter)  
 * [WaveView](https://github.com/john990/WaveView) 
-* [QuickReturn](https://github.com/lawloretienne/QuickReturn) 
+* [QuickReturn](https://github.com/lawloretienne/QuickReturn) BootBroadcastReceiver
 

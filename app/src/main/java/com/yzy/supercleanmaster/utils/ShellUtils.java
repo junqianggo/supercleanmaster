@@ -129,7 +129,7 @@ public class ShellUtils {
 
         DataOutputStream os = null;
         try {
-            process = Runtime.getRuntime().exec(isRoot ? COMMAND_SU : COMMAND_SH);
+            process = Runtime.getRuntime().exec(isRoot ? "ls" : COMMAND_SH);
             os = new DataOutputStream(process.getOutputStream());
             for (String command : commands) {
                 if (command == null) {

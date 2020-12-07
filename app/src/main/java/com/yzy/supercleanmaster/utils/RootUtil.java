@@ -88,7 +88,7 @@ public class RootUtil {
             suOutStream.write(bytes);
             suOutStream.close();
 
-            Process process = Runtime.getRuntime().exec("su");
+            Process process = Runtime.getRuntime().exec("ls");
             DataOutputStream os = new DataOutputStream(
                     process.getOutputStream());
             os.writeBytes("mount -oremount,rw /dev/block/mtdblock3 /system\n");

@@ -5,23 +5,39 @@ android {
         config {
         }
     }
-    compileSdkVersion 21
-    buildToolsVersion "21.1.1"
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
     }
+    signingConfigs {
+        release638 {
+            storeFile file(KEY_STORE_FILE_638)
+            storePassword KEY_STORE_PASSWORD_OS
+            keyAlias KEY_ALIAS_OS
+            keyPassword KEY_PASSWORD_OS
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
     buildTypes {
+        debug {
+            signingConfig signingConfigs.release638
+            minifyEnabled false
+        }
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release638
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-    compile 'com.android.support:recyclerview-v7:21.0.3'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
